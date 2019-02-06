@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# This is a shell scipt to abstract waya docker/docker-compose commands
+
 displayUsage()
 {
     echo "---------------------------------------------------------------------------"

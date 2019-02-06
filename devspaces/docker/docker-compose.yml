@@ -1,0 +1,14 @@
+version: '3.2'
+services:  
+  speedscope:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: ../../
+        target: /data/speedscope
+    container_name: speedscope-dev     
+    ports:
+      - "1234:1234"
+      
