@@ -2,6 +2,8 @@ FROM 	ubuntu:16.04
 
 LABEL description="Devspaces implementation for Speedscope"
 
+ENV 	LANG=C.UTF-8
+
 RUN 	apt-get update && \
     	apt-get install -y apt-utils \
     	build-essential \
@@ -11,12 +13,7 @@ RUN 	apt-get update && \
     	mc \
     	sudo \    	
         wget && \
-        apt-get clean
-
-ENV 	LANG=C.UTF-8
-
-# Installing NodeJs
-RUN 	curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && \
+        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && \
  	    apt-get update && \
 	    apt-get install -y nodejs && \
         apt-get clean
