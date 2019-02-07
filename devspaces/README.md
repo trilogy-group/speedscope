@@ -23,6 +23,8 @@ Use `devspaces --help` to know about updated commands.
 
 ### Start Devspaces 
 
+This guide assumes that user is inside devspaces folder of the repository.
+
 1. Get inside docker folder
 
 ```bash
