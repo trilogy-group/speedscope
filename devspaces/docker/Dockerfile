@@ -18,12 +18,16 @@ RUN 	apt-get update && \
 	    apt-get install -y nodejs && \
         apt-get clean
 
+COPY    entrypoint.sh /entrypoint.sh
 COPY    start.sh /start.sh
 
-RUN chmod u+x /start.sh
+RUN     chmod u+x /entrypoint.sh /start.sh && \
+        sed -i 's/^M$//' /entrypoint.sh && \
+        sed -i 's/^M$//' /start.sh 
+
 
 WORKDIR /data
 
 EXPOSE 1234
 
-CMD ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["/entrypoint.sh"]
