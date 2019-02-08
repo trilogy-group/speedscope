@@ -63,7 +63,6 @@ devspaces exec speedscope
 7. Copy shell script to `/data` folder and run it. It will clone, build and run the project
 
 ```bash
-cp /start.sh .
 ./start.sh
 ```
 
